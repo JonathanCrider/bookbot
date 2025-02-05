@@ -1,5 +1,5 @@
 def main():
-  path_to_file = "books/frankensteins.txt"
+  path_to_file = "books/frankenstein.txt"
   book_text = get_book_text(path_to_file)
   if book_text is None:
     return
