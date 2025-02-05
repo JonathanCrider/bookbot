@@ -35,7 +35,7 @@ def book_report(word_count, character_count, path_to_file):
   alphabet = ("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
   print(f"--- Begin report of {path_to_file} ---")
   print(f"{word_count} words found in the document\n")
-  for char in character_count:
+  for char in sorted(character_count):
     if char in alphabet:
       print(f"The '{char}' character was found {character_count[char]} times")
   print("--- End report ---")
