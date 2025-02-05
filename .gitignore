@@ -1,7 +1,7 @@
-books/
-__pycache__
+# books/
 
 # Ignore temporary test files
+__pycache__
 **/test_file.txt
 
 # Ignore editor/IDE artifacts (e.g., VSCode, PyCharm)
