@@ -1,5 +1,8 @@
+import sys
+
 def main():
-  path_to_file = "books/frankenstein.txt"
+  default_path = "books/frankenstein.txt"
+  path_to_file = sys.argv[1] if len(sys.argv) > 1 else default_path
   book_text = get_book_text(path_to_file)
   if book_text is None:
     return
