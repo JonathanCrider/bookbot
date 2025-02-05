@@ -14,7 +14,13 @@ def main():
   book_report(word_count, character_count, path_to_file)
 
 
+# HELPER FUNCTIONS
+
 def get_book_text(path):
+  """
+  Reads text from file path.
+  Returns contents as string, or None if no file found.
+  """
   try:
     with open(path) as f:
       file_contents = f.read()
@@ -26,11 +32,19 @@ def get_book_text(path):
 
 
 def get_word_count(file):
+  """
+  Returns approximate number of words.
+  Splits on space, so may be slightly inaccurate.
+  """
   word_count = len(file.split())
   return word_count
 
 
 def get_character_count(file):
+  """
+  Returns a dictionary of every character in the file.
+  Key/value of character/count.
+  """
   character_count = {}
   all_lower_case = file.lower()
 
@@ -44,6 +58,10 @@ def get_character_count(file):
 
 
 def book_report(word_count, character_count, path_to_file):
+  """
+  Returns a report of both total number of words and a count of each character of the alphabet.
+  Case insensitive.
+  """
   alphabet = ("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
   
   print(f"--- Begin report of {path_to_file} ---")
